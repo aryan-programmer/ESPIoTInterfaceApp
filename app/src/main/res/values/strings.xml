@@ -1,0 +1,15 @@
+<resources>
+	<string name="app_name">ESP IoT Interface App</string>
+	<string name="welcome_message">Welcome to ESP IoT Interface App</string>
+	<string name="enter_addr_prompt">Enter the IP Address of the NodeMCU device to get started:</string>
+	<string name="ip_address">IP Address</string>
+	<string name="go">Go</string>
+	<string name="controls_heading">Controls:</string>
+	<string name="refresh">Refresh</string>
+	<string name="light_1">Light 1</string>
+	<string name="light_2">Light 2</string>
+	<string name="air_conditioner">Air Conditioner</string>
+	<string name="fan">Fan</string>
+	<string name="electric_motor">Electric Motor</string>
+	<string name="analog_device_input_display_text">Analog Device Input: %1$s</string>
+</resources>

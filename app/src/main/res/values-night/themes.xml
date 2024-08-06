@@ -1,0 +1,13 @@
+<resources>
+	<!-- Base application theme. -->
+	<style name="Base.Theme.ESPIoTInterfaceApp" parent="Theme.Material3.DayNight.NoActionBar">
+		<!-- Customize your dark theme here. -->
+		<!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+		<item name="android:windowLightStatusBar">true</item>
+	</style>
+
+	<style name="Theme.ESPIoTInterfaceApp.ActionBar.Solid" parent="Widget.Material3.ActionBar.Solid">
+		<item name="android:background">@color/material_dynamic_primary40</item>
+		<item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Toolbar.Surface</item>
+	</style>
+</resources>

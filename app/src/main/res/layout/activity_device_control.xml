@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".DeviceControlActivity">
+
+	<com.google.android.material.appbar.AppBarLayout
+			android:id="@+id/adc__app_bar_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		<com.google.android.material.appbar.MaterialToolbar
+				android:id="@+id/adc__toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minHeight="?attr/actionBarSize"
+				app:title="@string/app_name"
+				android:theme="@style/Theme.ESPIoTInterfaceApp.ActionBar.Solid" />
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+
+	<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:text="@string/controls_heading"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__controls_heading"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginStart="8dp"
+					android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+					app:layout_constraintBottom_toBottomOf="@+id/adc__refresh_btn"
+					app:layout_constraintTop_toTopOf="@+id/adc__refresh_btn" />
+
+			<Button
+					android:text="@string/refresh"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__refresh_btn"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					android:layout_marginTop="8dp"
+					android:layout_marginEnd="8dp" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+					android:text="@string/light_1"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__light1_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/adc__refresh_btn"
+					android:layout_marginTop="8dp" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+					android:text="@string/light_2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__light2_sw"
+					app:layout_constraintTop_toBottomOf="@+id/adc__light1_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginTop="8dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+					android:text="@string/air_conditioner"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__ac_sw"
+					app:layout_constraintTop_toBottomOf="@+id/adc__light2_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginTop="8dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+					android:text="@string/fan"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__fan_sw"
+					app:layout_constraintTop_toBottomOf="@+id/adc__ac_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginTop="8dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			<com.google.android.material.switchmaterial.SwitchMaterial
+					android:text="@string/electric_motor"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__motor_sw"
+					app:layout_constraintTop_toBottomOf="@+id/adc__fan_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginTop="8dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			<TextView
+					android:text="@string/analog_device_input_display_text"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__analog_device_input_disp"
+					app:layout_constraintTop_toBottomOf="@+id/adc__motor_sw"
+					app:layout_constraintStart_toStartOf="parent"
+					android:layout_marginTop="16dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					app:layout_constraintEnd_toEndOf="parent" />
+
+			<ProgressBar
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/adc__loading_spinner"
+					app:layout_constraintBottom_toBottomOf="@+id/adc__refresh_btn"
+					app:layout_constraintTop_toTopOf="@+id/adc__refresh_btn"
+					app:layout_constraintEnd_toStartOf="@id/adc__refresh_btn"
+					android:layout_marginEnd="8dp" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
